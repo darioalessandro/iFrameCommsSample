@@ -1,5 +1,7 @@
 # iFrame comms using Post Message:
 
+![Demo screenshot](imgs/scr1.png)
+
 1) parentPage.html loads child.html by using an iframe.
 
 2) parentPage sends "Hello" using:
