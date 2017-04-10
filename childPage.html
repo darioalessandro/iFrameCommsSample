@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    //Retrieved from https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+    window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        var origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
+        var logs = document.getElementById("logs").innerHTML;
+        var log = {"Child page: got message " : event,
+                   "origin: " : origin,
+                    "t" : new Date()};
+        logs = "<div>" + JSON.stringify(log) + "</div>" + logs ;
+        document.getElementById("logs").innerHTML = logs;
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Child Page</title>
+</head>
+<body>
+    <h1>Child Page</h1>
+    <div id="logs"></div>
+</body>
+</html>
