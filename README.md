@@ -1,5 +1,7 @@
 # iFrame comms using Post Message:
 
+Tech demo to understand how to communicate with an iFrame by using the "postMessage" API.
+
 ![Demo screenshot](imgs/scr1.png)
 
 1) parentPage.html loads child.html by using an iframe.
